@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  builder:
+    image: emelinda/windows-builder:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: "no"
+    volumes:
+      - ./:/etc/app
